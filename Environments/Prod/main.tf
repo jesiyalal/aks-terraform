@@ -18,26 +18,19 @@ module "storage" {
   rg_name       = module.rg.rg_name
 }
 
-resource "azurerm_kubernetes_cluster" "aks" {
-  name                = var.aks_name
-  location            = var.location
-  resource_group_name = module.rg.rg_name
-  dns_prefix          = "aksdnsprod"
+module "aks" {
+  source       = "../../modules/aks"
 
-  default_node_pool {
-    name            = "default"
-    node_count      = 2
-    vm_size         = "Standard_B2s"   
-    vnet_subnet_id  = module.vnet.subnet_id
-  }
+  aks_name     = var.aks_name
+  location     = var.location
+  rg_name      = module.rg.rg_name
+  dns_prefix   = "aksdns"
 
-  identity {
-    type = "SystemAssigned"
-  }
+  subnet_id    = module.vnet.subnet_id
 
-  network_profile {
-    network_plugin = "azure"
-    service_cidr   = "10.3.0.0/16"   
-    dns_service_ip = "10.3.0.10"
-  }
+  node_count   = 1
+  vm_size      = "Standard_B2s"
+
+  environment  = "prod"
 }
+  
