@@ -22,9 +22,7 @@ steps:
     workingDirectory: 'environments/dev'
     backendAzureRmUseEntraIdForAuthentication: false
     backendServiceArm: 'azure-service-connection-dev'
-    backendAzureRmStorageAccountName: 'tfbackenddev123'
-    backendAzureRmContainerName: 'tfstate'
-    backendAzureRmKey: 'dev.terraform.tfstate'
+    
 - task: TerraformTaskV4@4
   displayName: 'Terraform plan'
   inputs:
