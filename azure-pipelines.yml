@@ -19,7 +19,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/environments/dev'
+    workingDirectory: 'environments/dev'
     backendAzureRmUseEntraIdForAuthentication: false
     backendServiceArm: 'azure-service-connection-dev'
     backendAzureRmStorageAccountName: 'tfbackenddev123'
