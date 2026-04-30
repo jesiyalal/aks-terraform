@@ -35,7 +35,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: 'environments/dev'
+    workingDirectory: 'Environments/Dev'
     environmentServiceNameAzureRM: 'azure-dev-terraform-sc'
 
 # APPLY
@@ -44,6 +44,6 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: 'environments/dev'
+    workingDirectory: 'Environments/Dev'
     environmentServiceNameAzureRM: 'azure-dev-terraform-sc'
     commandOptions: '-auto-approve'
