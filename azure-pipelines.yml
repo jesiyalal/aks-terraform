@@ -37,7 +37,7 @@ steps:
     command: 'plan'
     workingDirectory: 'Environments/Dev'
     environmentServiceNameAzureRM: 'azure-dev-terraform-sc'
-    commandOptions: '-var-file="dev.tfvars"'
+    #commandOptions: '-var-file="dev.tfvars"'
 
 # APPLY
 - task: TerraformTaskV4@4
@@ -47,4 +47,4 @@ steps:
     command: 'apply'
     workingDirectory: 'Environments/Dev'
     environmentServiceNameAzureRM: 'azure-dev-terraform-sc'
-    commandOptions: '-auto-approve -var-file="dev.tfvars"'
+   # commandOptions: '-auto-approve -var-file="dev.tfvars"'
