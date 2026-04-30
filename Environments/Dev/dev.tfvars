@@ -1,0 +1,5 @@
+location     = "Canada Central"
+rg_name      = "dev-rg"
+vnet_name    = "dev-vnet"
+storage_name = "devtfstate12345"
+aks_name     = "dev-aks"
