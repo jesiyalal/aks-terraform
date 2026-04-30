@@ -28,6 +28,7 @@ steps:
     backendAzureRmStorageAccountName: 'tfbackenddev123'
     backendAzureRmContainerName: 'tfstate'
     backendAzureRmKey: 'dev.terraform.tfstate'
+    commandOptions: '-var-file="dev.tfvars"'
 
 # PLAN
 - task: TerraformTaskV4@4
