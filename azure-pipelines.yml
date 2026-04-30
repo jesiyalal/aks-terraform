@@ -22,7 +22,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: 'environments/dev'
+    workingDirectory: 'Environments/Dev'
     backendServiceArm: 'azure-dev-terraform-sc'
     backendAzureRmResourceGroupName: 'tf-backend-dev-rg'
     backendAzureRmStorageAccountName: 'tfbackenddev123'
