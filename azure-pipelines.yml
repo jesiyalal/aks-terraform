@@ -14,7 +14,7 @@ steps:
 - task: TerraformInstaller@1
   inputs:
     terraformVersion: 'latest'
-- task: TerraformTask@5
+- task: TerraformTaskV4@4
   displayName: 'Terraform Init'
   inputs:
     provider: 'azurerm'
@@ -25,13 +25,13 @@ steps:
     backendAzureRmStorageAccountName: 'tfbackenddev123'
     backendAzureRmContainerName: 'tfstate'
     backendAzureRmKey: 'dev.terraform.tfstate'
-- task: TerraformTask@5
+- task: TerraformTaskV4@4
   displayName: 'Terraform plan'
   inputs:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'azure-service-connection-dev'
-- task: TerraformTask@5
+- task: TerraformTaskV4@4
   displayName: 'Terraform Apply'
   inputs:
     provider: 'azurerm'
