@@ -28,7 +28,7 @@ module "aks" {
 
   subnet_id    = module.vnet.subnet_id
 
-  node_count   = 2
+  node_count   = 1
   vm_size      = "Standard_B2s"
 
   environment  = "dev"
